@@ -43,6 +43,69 @@
 
     <section class="carrossel">
         <h2 class="carrossel__titulo">ÚLTIMOS LANÇAMENTOS</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="./imgs/ApacheKafka.png" alt="Livro sobre Apache kafka"></div>
+            <div class="swiper-slide"><img src="./imgs/Javascript.png" alt="Livro Javascript"></div>
+            <div class="swiper-slide"><img src="./imgs/Liderança.png" alt="Livro sobre Liderança"></div>
+            <div class="swiper-slide"><img src="./imgs/Guia Front-end.svg" alt="Livro guia para front-end"></div>
+            <div class="swiper-slide"><img src="./imgs/Portugol.png" alt="livro sobre Portugol"></div>
+            <div class="swiper-slide"><img src="./imgs/Tuning.png" alt="livro sobre Tuning"></div>
+            
+            </div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="card">
+            <!-- 1ªlinha -->
+            <div class="card__descricao">
+                <!-- 1ªcoluna -->
+                <div class="descricao">
+                    <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
+                    <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
+                    <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+                </div>
+                <!-- 2ªcoluna -->
+                <img src="./imgs/Perfil-escritora 2.svg" class="card__descrica__imagem">
+            </div>
+            <!-- 2ªlinha -->
+            <div class="card__botoes">
+                <!-- 1ªcoluna -->
+                <ul class="botoes">
+                    <li class="botoes__item"><img src="./imgs/Favoritos.svg" alt="favoritos"></li>
+                    <li class="botoes__item"><img src="./imgs/Compras.png" alt="sacola de compras"></li>
+                </ul>
+                <!-- 2ª coluna -->
+                <a href="#" class="botoes__ancora">Saiba mais</a>
+                
+            </div>
+        </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        disabledClass: 'disabled_swiper_button',
+        },
+        pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+    </script>
 </body>
 </html>
